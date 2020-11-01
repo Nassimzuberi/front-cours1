@@ -1,9 +1,9 @@
 body {
-margin: auto;
---primary :  #335d2d;
---secondary :  #7ea04d;
+    margin: auto;
+    --primary :  #E43426;
+    --secondary: #ffd49f;
     background: url("../images/background.jpg") no-repeat fixed;
-
+    font-family: 'Raleway',sans-serif;
 }
 
 a {
@@ -17,7 +17,6 @@ a {
 .mt-10 {
     margin-top:10em;
 }
-
 .mt-5 {
     margin-top:5em;
 }
@@ -25,13 +24,23 @@ a {
 .mt-3 {
     margin-top:3em;
 }
-
+.mb-2 {
+    margin-bottom: 1.5em;
+}
 .mr-1 {
     margin-right:1em;
 }
 .ml-1 {
-    margin-left:0.6em;
+    margin-left:1em;
 }
+.red-word {
+    color:var(--primary);
+}
+
+.yellow-word {
+    color: var(--secondary);
+}
+/**************************** NAVBAR *********************/
 nav {
     position:fixed;
     top:0;
@@ -67,19 +76,24 @@ nav {
 .nav-item a , .login{
     color:#ccc;
     font-size:1.1em;
+    position:relative;
 }
 .nav-item a:hover , .login:hover {
     color:#fff;
 }
 .nav-item a:hover{
-    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    text-shadow: 0 0 10px #E43426, 0 0 20px #E43426, 0 0 40px #E43426;
 }
+
 .login {
     margin-right: 2em;
 }
 .main {
-
 }
+
+
+/*********************************** Home *******************************/
+
 .home {
     min-height: 100vh;
     position: relative;
@@ -90,10 +104,7 @@ nav {
     color:white;
 }
 
-.home-img {
-    width:100px;
-    margin-top:-2em;
-}
+
 .background-animated {
     width:100%;
     height:100vh;
@@ -106,34 +117,144 @@ nav {
     font-size:4em;
     text-align: center;
     font-family: 'Gugi', cursive;
-
 }
-
-.home-btn{
-    padding:20px;
-    font-weight: bold;
+.home-desc {
+    font-size:3em;
+    text-align: center;
+    font-family: 'Gugi', cursive;
+}
+.accroche {
     font-size: 2em;
+    margin-top:-1em;
+}
+.home-img{
+    width:250px;
+}
+.class-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+
+}
+
+.class {
+    transition: all 0.5s ease;
+    width:250px;
+}
+
+
+.class:hover {
+    transform: translateY(-10px);
+    cursor:pointer;
+}
+
+.class-name {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0 0 10px #E43426, 0 0 20px #E43426, 0 0 40px #E43426;
+
+    font-family: 'Gugi', cursive;
+}
+
+.class-name::after{
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    display: block;
+    width: 100%;
+    height:15px;
+    background-color: var(--primary);
+    border-bottom:2px var(--secondary) solid;
+    z-index:-1;
+
+
+}
+/************************News**************************************/
+.news {
+
+
+}
+.new {
     display: flex;
-    align-items: center;
-}
-.btn-atk {
-    color:red;
-    margin-right: 15px;
-}
-
-.btn-def {
-    color:blue;
-    margin-left: 15px;
+    border: 1px black solid;
+    background-color: rgba(12,12, 12, 0.62);
+    color: #fff;
 
 }
+.new-main {
+    flex:2;
+    padding:1em;
+    border-right: 2px solid rgba(255, 255, 255, 0.08)
 
+}
+.new-main img {
+    width: 100%;
+}
+.new-menu h4 {
+    font-size:1.5em;
+}
+.new-menu {
+    flex:3;
+    padding:2em;
+}
+
+.new-menu h3 {
+    font-size: 1.5em;
+    color: var(--primary);
+    border-bottom: 2px var(--primary) solid;
+}
+
+.news-item {
+    display: block;
+    padding:0.5em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-date{
+    color :rgba(255, 255, 255, 0.35);
+}
+
+.news-item:hover {
+    cursor: pointer;
+    background: rgba(159, 159, 159, 0.06);
+}
+
+.news-link-right {
+    position:relative;
+    padding: 0.5em 0 1em 0;
+}
+.news-link-right a{
+    font-size: 1.2em;
+    color:#fff;
+    position: absolute;
+    right: 0;
+
+}
+.news-link-right i {
+    color: var(--primary);
+}
+.news-link-right a:hover{
+    color:var(--primary);
+}
 /************************Activity**********************************/
 
-.activities h2 {
+.activities {
+    padding-bottom: 4em;
+
+}
+
+.activities h2, .news h2 {
+    font-family: 'Gugi', cursive;
     font-size: 2.5em;
     text-align: center;
     color:#fff;
-    padding: 1em 0 1em 0 ;
+    padding: 1em 0 0em 0 ;
+
 }
 
 .activity {
@@ -146,6 +267,8 @@ nav {
     color:white;
     text-align: center;
     padding:1em;
+    transition: all .5s;
+
 }
 .activity-header:hover{
     cursor:pointer;
@@ -158,11 +281,76 @@ nav {
 .activity-title {
     font-size: 1.5em;
 }
+/********************************Contact**************************************/
 
-.activity-desc{
-    font-size: 1em;
+.form {
+    display: flex;
+    background-color: rgba(12,12, 12, 0.72);
+    color:#fff;
+
 }
 
+.right-img {
+    flex:1;
+}
+.right-img img {
+    width: 100%;
+    height:100%
+}
+.form form {
+    flex:1;
+    padding:1em 5em 0 5em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form form input,.form form select,textarea {
+    border:none;
+    background-color: inherit;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    padding:0.8em 0;
+    display: block;
+    margin-bottom: 1em;
+    border-bottom: 2px #ddd solid;
+    color:#fff;
+
+}
+
+.form-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.form form input:focus,.form form select:focus,textarea:focus {
+    border-bottom: 2px var(--secondary) solid;
+}
+input:focus, select:focus, textarea:focus, button:focus { outline: none; }
+
+::placeholder {
+    font-size: 1.2em;
+
+}
+textarea {
+    height:100px;
+}
+
+.btn-submit {
+    border: 2px #fff solid;
+    border-radius:90px;
+    padding:1em 3em 1em 3em;
+    background-color: inherit;
+    font-weight:bold;
+    color:#fff;
+}
+
+.btn-submit:hover {
+    background-color: #fff;
+    color:#222;
+    cursor:pointer;
+}
 /*******************************Footer***************************************/
 
 footer {

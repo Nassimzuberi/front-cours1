@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi+Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <title>Mon association au sein de l'école HETIC</title>
+    <title>RPG'HETIC - Association de jeux vidéos RPG </title>
 </head>
 <body>
     <header>
         <nav>
 
             <ul class="navbar">
-                <a href="#" class="brand">
-                    RPG'HETIC
+                <a href="" class="brand">
+                    <span class="red-word">RPG</span>'HETIC
                 </a>
                 <li class="nav-item">
-                    <a href="#">Accueil</a>
+                    <a href="#home">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Actualités</a>
+                    <a href="#news">Actualités</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Informations</a>
+                    <a href="#info">Informations</a>
                 </li>
                 <li class="nav-item">
                     <a href="#">Contact</a>
@@ -33,25 +33,82 @@
         </nav>
     </header>
     <div class="main">
-        <section class="home">
+        <section class="home" id="home">
             <video src="assets/video/smoke.mp4" autoplay muted class="background-animated" loop></video>
-            <h1>RPG'HETIC</h1>
+            <h1 hidden>RPG'HETIC</h1>
+            <p class="home-desc">L'association de développement de jeu type RPG</p>
+            <p class="accroche"><span class="yellow-word">Fuir</span> n'est plus une option, <span class="red-word"> Choisis</span> ton camp</p>
+
+            <div class="class-group">
+                <div class="class">
+                    <p class="class-name">Graphic designer</p>
+                </div>
+                <div class="class">
+                    <p class="class-name">Game developer</p>
+                </div>
+                <div class="class">
+                    <p class="class-name">Game designer</p>
+                </div>
+            </div>
 
 
 
             <div class="home-btn">
-                <p class="btn-atk">Attaquer</p>
-                <img src="assets/images/rpg-game-white.svg" alt="" class="home-img">
-                <p class="btn-def">Défendre</p>
-            </p>
+            </div>
 
         </section>
-        <section class="activities">
+        <section class="news mt-5" id="news">
             <div class="container">
-                <h2 class="title">Activités</h2>
+                <h2 class="title mb-2">Actualités</h2>
+
+                <section class="new">
+                    <article class="new-main">
+                        <img src="assets/images/news1.jpg" alt="">
+                        <h4>Nouveau projet de développement de jeu</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae cum deserunt et exercitationem fugit inventore magni, maiores molestias mollitia, nisi omnis possimus quidem quo rem reprehenderit sit temporibus. Alias ducimus est harum iste necessitatibus nobis officiis quos repellendus. Et nemo rerum sequi. Assumenda at nam quos reiciendis repellat sunt!</p>
+                        <p class="news-date">25/11/2020</p>
+                    </article>
+                    <aside class="new-menu">
+                        <h3>Nouveautés</h3>
+                        <a href="#" class="news-item">
+                            <p class="news-name">Concours OPERA</p>
+                            <p class="news-date">25/11/2020</p>
+
+                        </a>
+                        <a href="#" class="news-item">
+                            <p class="news-name">La guilde PHASMAPHORIA recrute !!!</p>
+                            <p class="news-date">25/11/2020</p>
+
+                        </a>
+                        <a href="#" class="news-item">
+                            <p class="news-name">Nouveau record atteint sur Dark souls</p>
+                            <p class="news-date">25/11/2020</p>
+
+                        </a>
+                        <a href="#" class="news-item">
+                            <p class="news-name">Sortie de Genshin Impact</p>
+                            <p class="news-date">25/11/2020</p>
+
+                        </a>
+                        <a href="#" class="news-item">
+                            <p class="news-name">Acte 2 de Valorant dévoilé</p>
+                            <p class="news-date">25/11/2020</p>
+
+                        </a>
+                        <div class="news-link-right">
+                            <a href="#" class="news-link-right"><i class="fa fa-plus mr-1"></i>Afficher plus</a>
+                        </div>
+
+                    </aside>
+                </section>
+            </div>
+        </section>
+        <section class="activities mt-5" id="info">
+            <div class="container">
+                <h2 class="title mb-2">Informations</h2>
                 
                 <div class="activity" style="background: url('assets/images/fantasy.jpg') no-repeat right; ">
-                    <div class="activity-header">
+                    <div class="activity-header" >
                         <div class="activity-border">
                             <h3 class="activity-title">Hardcore</h3>
                             <div class="activity-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequatur, debitis earum excepturi mollitia nam possimus quae quod rerum ullam? Ad alias delectus esse, libero molestias nostrum odit optio provident.</div>
@@ -78,10 +135,38 @@
                 </div>
             </div>
         </section>
+        <section class="contact">
+            <div class="form">
+                <div class="right-img">
+                    <img src="assets/images/contact.svg" alt="">
+                </div>
+                <form method="get" action="">
+                    <h2>Contactez-nous</h2>
+                        <input type="text" placeholder="Nom" >
+                        <input type="text" placeholder="Prenom">
+                        <select>
+                            <option selected>Objet du contact</option>
+                            <option value="1">Demande de recrutement</option>
+                            <option value="2">Demande de projet</option>
+                        </select>
+                        <select>
+                            <option selected>Votre qualification</option>
+                            <option value="1">Graphic designer</option>
+                            <option value="2">Game designer</option>
+                            <option value="2">Game developer</option>
+                        </select>
+
+                    <input type="mail" placeholder="Adresse mail">
+                    <textarea placeholder="Entrez votre message" cols="4"></textarea>
+
+                    <button type="submit" class="btn-submit"><i class="fa fa-paper-plane mr-1"></i>ENVOYER</button>
+                </form>
+            </div>
+        </section>
     </div>
     <footer>
         <h2 class="brand">RPG'HETIC</h2>
-        <p>Copyright© 2020 ZUBERI Nassim ALL RIGHTS RESERVED</p>
+        <p>Copyright© 2020 ALL RIGHTS RESERVED</p>
     </footer>
 
     <script src="assets/js/script.js"></script>
