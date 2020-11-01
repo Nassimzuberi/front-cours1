@@ -365,3 +365,42 @@ footer {
 footer p {
     color:#eee;
 }
+
+@media (max-width:900px){
+    nav, .navbar {
+        display:block;
+        text-align: center;
+    }
+    .login{
+       margin:0;
+    }
+    .class-group {
+        display: block;
+    }
+
+    .new {
+        display:block;
+    }
+    .container {
+        padding: 0;
+    }
+
+    .right-img {
+        display:none;
+    }
+
+    .form form {
+        padding:10px;
+    }
+
+    footer {
+        display:block;
+        text-align: center;
+    }
+}
+
+@media (min-width:900px) and (max-width:1200px) {
+    .container{
+        padding: 0 3em 0 3em;
+    }
+}
