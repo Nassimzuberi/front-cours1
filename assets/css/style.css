@@ -1,9 +1,21 @@
+@font-face {
+    font-family: "Gugi";
+    src: url("Gugi-Regular.ttf") format("ttf")
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("Raleway-Regular.ttf") format("ttf")
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: auto;
     --primary :  #E43426;
     --secondary: #ffd49f;
     background: url("../images/background.jpg") no-repeat fixed;
     font-family: 'Raleway',sans-serif;
+    outline: none;
 }
 
 a {
@@ -40,6 +52,7 @@ a {
 .yellow-word {
     color: var(--secondary);
 }
+
 /**************************** NAVBAR *********************/
 nav {
     position:fixed;
@@ -47,7 +60,6 @@ nav {
     width:100%;
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     background-color: rgba(0,0,0,0.6);
     z-index:1;
@@ -57,8 +69,11 @@ nav {
     text-decoration: none;
     color: #fff;
     font-family: 'Gugi', cursive;
-    margin-right:1em;
+    margin: 0 1em;
 
+}
+.btn-responsive {
+    display: none;
 }
 .navbar {
     flex-basis: auto;
@@ -102,6 +117,8 @@ nav {
     justify-content: center;
     align-items: center;
     color:white;
+
+
 }
 
 
@@ -174,8 +191,8 @@ nav {
 /************************News**************************************/
 .news {
 
-
 }
+
 .new {
     display: flex;
     border: 1px black solid;
@@ -246,6 +263,7 @@ nav {
 .activities {
     padding-bottom: 4em;
 
+
 }
 
 .activities h2, .news h2 {
@@ -282,7 +300,10 @@ nav {
     font-size: 1.5em;
 }
 /********************************Contact**************************************/
+.contact {
 
+
+}
 .form {
     display: flex;
     background-color: rgba(12,12, 12, 0.72);
@@ -368,17 +389,58 @@ footer p {
 }
 
 @media (max-width:900px){
-    nav, .navbar {
-        display:block;
-        text-align: center;
+    body {
+        font-size: 12px;
     }
-    .login{
-       margin:0;
+    .btn-responsive {
+        display: inline-block;
+        cursor: pointer;
+        border: 0;
+        background-color: inherit;
+        margin:0 1em;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        margin: 5px 0px;
+        transition: 0.4s;
+    }
+
+    .btn-responsive:focus ~ .navbar{
+        display:block;
+    }
+
+    .btn-responsive:focus .bar1 {
+        transform: rotate(-45deg) translate(-2px, 2px) ;
+    }
+
+    .btn-responsive:focus .bar2 {
+        transform: rotate(45deg) translate(-3px, -3px);
+
+    }
+    .btn-responsive:focus .bar3 {
+        opacity: 0;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:1em 0;
+    }
+
+    .navbar {
+        padding: 0;
+        width: 100%;
+        display: none;
+        text-align: center;
     }
     .class-group {
         display: block;
     }
-
+    .home {
+        text-align: center;
+    }
     .new {
         display:block;
     }
@@ -393,7 +455,9 @@ footer p {
     .form form {
         padding:10px;
     }
-
+    .contact{
+        margin-bottom: 10px;
+    }
     footer {
         display:block;
         text-align: center;
