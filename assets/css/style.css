@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Gugi";
-    src: url("../front-cours1/Gugi-Regular.ttf") format("ttf")
+    src: url("/Gugi-Regular.ttf") format("ttf")
 }
 @font-face {
     font-family: "Raleway";
-    src: url("../front-cours1/Raleway-Regular.ttf") format("ttf")
+    src: url("/Raleway-Regular.ttf") format("ttf")
 }
 html {
     scroll-behavior: smooth;
