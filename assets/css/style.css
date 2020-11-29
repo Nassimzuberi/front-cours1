@@ -68,7 +68,7 @@ nav {
     font-size: 2em;
     text-decoration: none;
     color: #fff;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi', "Roboto Light", serif;
     margin: 0 1em;
 
 }
@@ -133,12 +133,12 @@ nav {
 .home h1 {
     font-size:4em;
     text-align: center;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi',"Roboto Light", serif;
 }
 .home-desc {
     font-size:3em;
     text-align: center;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi', "Roboto Light", serif;
 }
 .accroche {
     font-size: 2em;
@@ -172,7 +172,7 @@ nav {
     position: relative;
     text-shadow: 0 0 10px #E43426, 0 0 20px #E43426, 0 0 40px #E43426;
 
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi',"Roboto Light", serif;
 }
 
 .class-name::after{
@@ -267,7 +267,7 @@ nav {
 }
 
 .activities h2, .news h2 {
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi',"Roboto Light", serif;
     font-size: 2.5em;
     text-align: center;
     color:#fff;
