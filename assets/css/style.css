@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Gugi";
-    src: url(./assets/css/Gugi-Regular.ttf)
+    src: url("../front-cours1/assets/css/Gugi-Regular.ttf") format("ttf");
 }
 @font-face {
     font-family: "Raleway";
